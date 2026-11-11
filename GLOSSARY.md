@@ -92,3 +92,21 @@ A Refund where the money couldn't be sent. The Refund Request stays approved, be
 **Watch Limit**:
 The amount of Watched time on a course past which a Student can no longer get a Refund, because they've had the course.
 _Avoid_: Watch cap, Viewing threshold
+
+### Notifications
+
+**Notification**:
+An in-app message telling one person that something happened that concerns them, or that something needs their action.
+_Avoid_: Alert, Message
+
+**Announcement**:
+A Notification someone writes by hand for a group: an Instructor to the Students on one of their courses, a Team Admin to the Students holding Claimed Seats on one of their Team Licences, or a Platform Admin to everyone or to everyone in one role.
+_Avoid_: Broadcast, Post
+
+**Feed**:
+Where a person reads their personal Notifications. Everyone has exactly one.
+_Avoid_: Inbox, Notification center
+
+**Work Feed**:
+A second Feed, kept apart from the personal one, holding only Notifications that ask an Instructor, Team Admin or Platform Admin to act in that role. Students don't have one. When several Platform Admins could act, each gets the Notification in their own Work Feed.
+_Avoid_: Queue, Task list
