@@ -100,8 +100,12 @@ An in-app message telling one person that something happened that concerns them,
 _Avoid_: Alert, Message
 
 **Announcement**:
-A Notification someone writes by hand for a group: an Instructor to the Students on one of their courses, a Team Admin to the Students holding Claimed Seats on one of their Team Licences, or a Platform Admin to everyone or to everyone in one role.
+A Notification someone writes by hand for a group: an Instructor to the Students enrolled on one of their courses when it is sent, a Team Admin to the Students holding Claimed Seats on one of their Team Licences, or a Platform Admin to everyone or to everyone in one role.
 _Avoid_: Broadcast, Post
+
+**Retracted Announcement**:
+An Announcement its author or a Platform Admin has withdrawn. It is removed from every Feed it reached.
+_Avoid_: Deleted, Recalled
 
 **Feed**:
 Where a person reads their personal Notifications. Everyone has exactly one.
