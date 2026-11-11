@@ -110,3 +110,7 @@ _Avoid_: Inbox, Notification center
 **Work Feed**:
 A second Feed, kept apart from the personal one, holding only Notifications that ask an Instructor, Team Admin or Platform Admin to act in that role. Students don't have one. When several Platform Admins could act, each gets the Notification in their own Work Feed.
 _Avoid_: Queue, Task list
+
+**Notification Category**:
+The area of Cadence a Notification belongs to: Discussion, Purchases & Refunds, Team, Course activity, Account, or Announcements. Not the same as a course's category.
+_Avoid_: Category (on its own), Type, Topic
