@@ -2070,6 +2070,49 @@ This course is still in draft while the cluster examples are rewritten against t
 
   console.log(`Created ${countRows(schema.lessonProgress)} lesson progress records.`);
 
+  // ─── Bookmarks and Notes ───
+  // Private to the Student who made them. Emma has some of each across both
+  // courses she is enrolled in; Olivia has one of each.
+
+  db.insert(schema.bookmarks)
+    .values([
+      { userId: students[0].id, lessonId: course1LessonIds[4], createdAt: daysAgo(30) },
+      { userId: students[0].id, lessonId: course1LessonIds[12], createdAt: daysAgo(20) },
+      { userId: students[0].id, lessonId: course2LessonIds[6], createdAt: daysAgo(8) },
+      { userId: students[2].id, lessonId: course1LessonIds[1], createdAt: daysAgo(15) },
+    ])
+    .run();
+
+  db.insert(schema.notes)
+    .values([
+      {
+        userId: students[0].id,
+        lessonId: course1LessonIds[4],
+        body: "Rewatch from 4:10 — the part about closures finally clicked.\nTry the exercise again without the hint.",
+        createdAt: daysAgo(30),
+        updatedAt: daysAgo(18),
+      },
+      {
+        userId: students[0].id,
+        lessonId: course2LessonIds[6],
+        body: "Questions for later:\n* why does the second example not re-render?\n# check the docs on keys",
+        createdAt: daysAgo(8),
+        updatedAt: daysAgo(8),
+      },
+      {
+        userId: students[2].id,
+        lessonId: course1LessonIds[1],
+        body: "Set up the editor extensions mentioned here.",
+        createdAt: daysAgo(15),
+        updatedAt: daysAgo(14),
+      },
+    ])
+    .run();
+
+  console.log(
+    `Created ${countRows(schema.bookmarks)} bookmarks and ${countRows(schema.notes)} notes.`
+  );
+
   // ─── Quiz Attempts ───
 
   // Helper to record a quiz attempt with answers
